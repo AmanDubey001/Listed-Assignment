@@ -91,9 +91,10 @@ const dashboard = () => {
           </div>
         </div>
         <div className="my-8 grid grid-cols-1 gap-6  md:grid-cols-2 lg:grid-cols-4">
-          {CardDetails.map(({ heading, color, numbers, image }) => {
+          {CardDetails.map(({id,heading, color, numbers, image }) => {
             return (
               <Card
+                key={id}
                 heading={heading}
                 color={color}
                 image={image}
@@ -128,14 +129,15 @@ const dashboard = () => {
 
           <div className="bg-white p-8 rounded-xl">
             <div className="flex flex-row justify-between items-center mb-2">
-              <h3 className="font-bold text-lg mb-2">Today's Schedule</h3>
+              <h3 className="font-bold text-lg mb-2">Today&apos;s Schedule</h3>
               <div className="flex items-center">
-                <p className="text-sm text-[#858585] mr-2">See All &gt; </p>
+                <p className="text-sm text-[#858585] mr-2">See All  </p>
               </div>
             </div>
-            {MeetingCardDetails.map(({ heading, border, time, location }) => {
+            {MeetingCardDetails.map(({ id,heading, border, time, location }) => {
               return (
                 <MeetingCards
+                 key={id}
                   heading={heading}
                   border={border}
                   time={time}

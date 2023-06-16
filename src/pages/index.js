@@ -74,7 +74,7 @@ export default function Home() {
             </button>
           </form>
           <h4 className="text-[1rem] text-[#858585] font-[400] flex justify-center gap-1 text-center mt-4">
-            Don't have an account?{" "}
+            Don &apos; t have an account?{" "}
             <button className="text-[#346BD4]">Register here</button>
           </h4>
         </div>
