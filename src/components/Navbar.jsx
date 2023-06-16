@@ -37,17 +37,17 @@ const Navbar = () => {
 
       
   return (
-    <div className=" bg-black  w-full px-6 absolute top-0 left-0 py-3 flex flex-col md:hidden">
+    <div className="z-100 bg-black w-full px-6 absolute top-0 left-0 py-3 flex flex-col md:hidden" style={{zIndex:50}}>
       <div className='flex flex-row justify-between'>  
       <h1 className='text-3xl tracking-wider font-[700] text-white '>Board.</h1>
      {open && <button onClick={()=>setOpen(!open)} ><GiHamburgerMenu size="30px" color="white"/></button>}
      {!open && <button onClick={()=>setOpen(!open)} ><RxCross1 size="30px" color="white"/></button>}
      </div>
-    {!open && <div className='my-4'>
+    {!open && <div className='my-4 '>
      <ul className='text-white'>
         { navLinks.map((item) => {
             const Icon = item.icon;
-            return (<button className='text-white text-lg flex gap-4 font-[400] items-center my-4' key={item.id}><Image src={Icon} alt={`${Icon}-icon`}  width={20} height={20}/> {item.name} </button>)
+            return (<button className='text-white text-lg flex gap-4 font-[400] items-center my-4 ' key={item.id}><Image src={Icon} alt={`${Icon}-icon`}  width={20} height={20}/> {item.name} </button>)
 
         })}
         </ul>

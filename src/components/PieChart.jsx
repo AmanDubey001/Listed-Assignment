@@ -25,13 +25,26 @@ const PieChart = () => {
         show: true,
         width: 0,
       },
+      responsive: [
+        {
+          breakpoint: 480,
+          options: {
+            chart: {
+              width: 300,
+            },
+            legend: {
+              position: "bottom",
+            },
+          },
+        },
+      ],
    
     },
     data: [25, 35, 50],
   });
   return (
     <div id="chart">
-      <Chart options={Data.option} series={Data.data} type="pie" width={350} />
+      <Chart options={Data.option} series={Data.data} type="pie" width={400} />
     </div>
   );
 };
